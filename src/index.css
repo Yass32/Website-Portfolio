@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+/*Apply styling to all in tailwind*/
+@layer base {
+    body{
+        @apply font-[Raleway];
+    }
+    li {
+        @apply px-4;
+        @apply cursor-pointer;
+    }
+}
+
+.content-div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 10rem;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* No overlay initially */
+    transition: background 0.3s ease;
+    z-index: 1;
+    /*  Ensure overlay is above background but below content */
+}
+
+.content-div:hover::before {
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay on hover */
+}
+
+.content-div .content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.content-div:hover .content {
+    opacity: 1;
+}
