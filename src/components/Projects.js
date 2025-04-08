@@ -1,4 +1,5 @@
 import React from 'react'
+import code_ed from '../assets/code_ed.png';
 import bank from '../assets/banksystem.png';
 import book from '../assets/bookstore.png';
 import quizzie from '../assets/quizzie.png';
@@ -16,13 +17,13 @@ const Projects = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5'>
 
           {/*Grid Item*/ }
-          <div style={{backgroundImage: `url(${bank})`}} className='max-w-xs h-64 shadow-lg shadow-[#040c16] group container rounded-md  flex justify-center items-center mx-auto content-div' >
+          <div style={{backgroundImage: `url(${code_ed})`}} className='max-w-xs h-64 shadow-lg shadow-[#040c16] group container rounded-md  flex justify-center items-center mx-auto content-div' >
             
             {/*Hover Effects*/ }
             <div className='content text-white '>
-              <span className='text-2xl font-bold  tracking-wider'>Banking System</span>
+              <span className='text-2xl font-bold  tracking-wider'>E-Learning Platform</span>
               <div>
-                <a href='/'> 
+                <a href='https://github.com/Yass32/E-learning_platform'> 
                   <button className='text-center rounded-lg px-4 py-2 m-2 bg-[#0a192f] hover:bg-[#CD0000] duration-300 ease-in'>Code</button>
                 </a>
               </div>
@@ -64,7 +65,7 @@ const Projects = () => {
             <div className='content text-white'>
               <span className='text-2xl font-bold  tracking-wider'>Banking System</span>
               <div>
-                <a href='/'> 
+                <a href='https://github.com/Yass32/Bank-Management-System'> 
                   <button className='text-center rounded-lg px-4 py-2 m-2 bg-[#0a192f] hover:bg-[#CD0000] duration-300 ease-in'>Code</button>
                 </a>
               </div>
